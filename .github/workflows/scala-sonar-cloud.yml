@@ -27,7 +27,8 @@ jobs:
         echo "github.event.changes.body.from #${{ github.event.changes.body.from }}"
     - name: This is rocket
 #       if: "${{ github.event.comment.body }} == 🚀"
-      if: ${{ github.event.comment.body == '🚀' }}
+#       if: ${{ github.event.comment.body == '🚀' }}
+      if: ${{ contains(github.event.comment.body, '🚀') }}
       run: |
         echo "hello 🚀"
       
