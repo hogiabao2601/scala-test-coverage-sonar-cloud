@@ -25,6 +25,11 @@ jobs:
         echo "github.event.issue.state #${{ github.event.issue.state }}"
         echo "github.event.comment.body #${{ github.event.comment.body }}"
         echo "github.event.changes.body.from #${{ github.event.changes.body.from }}"
+    - name: This is rocket
+#       if: "${{ github.event.comment.body }} == 🚀"
+      if: ${{ github.event.comment.body == '🚀' }}
+      run: |
+        echo "hello 🚀"
       
     - name: Set up JDK 8
       uses: actions/setup-java@v2
