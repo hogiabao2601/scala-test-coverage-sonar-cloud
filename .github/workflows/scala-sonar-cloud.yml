@@ -28,8 +28,8 @@ jobs:
     - name: Grep /home/runner/work/
       run: grep "/home/runner/work/" target/scala-2.12/scoverage-report/scoverage.xml
       
-    - name: Replace from /home/runner/work/ to /github/workspace
-      run: sed -i 's#/home/runner/work#/github/workspace#g' target/scala-2.12/scoverage-report/scoverage.xml
+    - name: Replace from /home/runner/work/scala-test-coverage-sonar-cloud/scala-test-coverage-sonar-cloud/ to /github/workspace
+      run: sed -i 's#/home/runner/work/scala-test-coverage-sonar-cloud/scala-test-coverage-sonar-cloud#/github/workspace#g' target/scala-2.12/scoverage-report/scoverage.xml
       
     - name: Grep /home/runner/work/
       run: grep "/github/workspace/" target/scala-2.12/scoverage-report/scoverage.xml
