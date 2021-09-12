@@ -19,10 +19,12 @@ jobs:
     - name: PR comment
       if: ${{ github.event.issue.pull_request }}
       run: |
-        echo "Comment on PR #${{ github.event.issue.number }}"
-        echo "Comment on PR #${{ github.event.issue.body }}"
-        echo "Comment on PR #${{ github.event.issue.title }}"
-        echo "Comment on PR #${{ github.event.issue.state }}"
+        echo "github.event.issue.number #${{ github.event.issue.number }}"
+        echo "github.event.issue.body #${{ github.event.issue.body }}"
+        echo "github.event.issue.title #${{ github.event.issue.title }}"
+        echo "github.event.issue.state #${{ github.event.issue.state }}"
+        echo "github.event.comment.body #${{ github.event.comment.body }}"
+        echo "github.event.changes.body.from #${{ github.event.changes.body.from }}"
       
     - name: Set up JDK 8
       uses: actions/setup-java@v2
