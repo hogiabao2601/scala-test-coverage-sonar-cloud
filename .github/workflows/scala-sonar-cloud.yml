@@ -1,19 +1,29 @@
 name: Scala CI
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+#  push:
+#    branches: [ master ]
+#  pull_request:
+#    branches: [ master ]
+  issue_comment:
+  
   workflow_dispatch:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
+    # This job only runs for pull request comments
+    - name: PR comment
+      if: ${{ github.event.issue.pull_request }}
+      run: |
+        echo "Comment on PR #${{ github.event.issue.number }}"
+        echo "Comment on PR #${{ github.event.issue.body }}"
+        echo "Comment on PR #${{ github.event.issue.title }}"
+        echo "Comment on PR #${{ github.event.issue.state }}"
+      
     - name: Set up JDK 8
       uses: actions/setup-java@v2
       with:
