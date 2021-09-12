@@ -12,4 +12,6 @@ class ServiceImpl extends ServiceAlg {
       a / b
     }
   }
+
+  override def multi(a: Int, b: Int): Int = a * b
 }
