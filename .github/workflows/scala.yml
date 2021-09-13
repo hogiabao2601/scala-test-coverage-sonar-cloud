@@ -22,3 +22,5 @@ jobs:
       # You may pin to the exact commit or the version.
       # uses: release-drafter/release-drafter@fe52e97d262833ae07d05efaf1a239df3f1b5cd4
       uses: release-drafter/release-drafter@v5.15.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
