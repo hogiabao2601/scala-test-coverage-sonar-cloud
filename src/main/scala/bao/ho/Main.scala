@@ -3,7 +3,7 @@ package bao.ho
 object Main {
   
   def sum(a: Int, b: Int): Int = a + b
-  
+  val BAZ = ""
   val LOG = 1000;
  def main(args: Array[String]): Unit = {
    println(s"Hello Work")
