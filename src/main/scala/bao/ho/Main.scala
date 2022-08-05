@@ -16,4 +16,5 @@ object Main {
  }
   
   def minus(a: Int, b: Int): Int = a - b
+  def multi(a: Int, b: Int): Int = a * b
 }
