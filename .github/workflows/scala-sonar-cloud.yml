@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - branch-*
+      - release-*
   pull_request:
     types: [opened, synchronize, reopened]
   issue_comment:
