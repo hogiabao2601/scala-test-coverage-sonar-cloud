@@ -14,4 +14,6 @@ object Main {
 //    val m = service.minus(2, 1)
 //    println(s"m = $m")
  }
+  
+  def minus(a: Int, b: Int): Int = a - b
 }
