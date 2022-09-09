@@ -17,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+  
+    - uses: actions/checkout@v2
+    # This job only runs for pull request comments
     - name: Go to src
       run: |
         pwd
@@ -31,10 +34,7 @@ jobs:
       run: |
         ls -al
         cd ./src
-        pwd
-  
-    - uses: actions/checkout@v2
-    # This job only runs for pull request comments
+        pwd    
     - name: PR comment
       if: ${{ github.event.issue.pull_request }}
       run: |
