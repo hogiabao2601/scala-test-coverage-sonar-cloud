@@ -51,6 +51,7 @@ jobs:
       run: | 
         echo ${{ github.event.issue }}
         echo ${{ github.event.issue.body_text }}
+        
         # sbt clean coverage test coverageReport coverageAggregate
         
     - name: Show target files
