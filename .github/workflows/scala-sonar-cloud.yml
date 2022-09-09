@@ -20,14 +20,17 @@ jobs:
     - name: Go to src
       run: |
         pwd
-        cd src
+        ls -al
+        cd ./src
         pwd
     - name: check currnet
       run: |
+        ls -al
         pwd
     - name: Go to src again
       run: |
-        cd src
+        ls -al
+        cd ./src
         pwd
   
     - uses: actions/checkout@v2
