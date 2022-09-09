@@ -47,6 +47,7 @@ jobs:
     - name: Run custom tests
       if: ${{ github.event.issue.pull_request }}
       run: | 
+        echo "Run ${{ github.event.comment.body }}"
         ${{ github.event.comment.body }}
         
         
