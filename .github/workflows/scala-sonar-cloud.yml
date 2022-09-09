@@ -43,32 +43,12 @@ jobs:
     - name: Run detault tests
       if: ${{ !github.event.issue.pull_request }}
       run: |
-        echo ${{ github.event.issue }}
-        echo ${{ github.event.issue }}
-        echo ${{ github.event.issue.body_text }}
-        # sbt clean coverage test coverageReport coverageAggregate
+        sbt clean coverage test coverageReport coverageAggregate
     - name: Run custom tests
-      env:
-        COMMENT_RUN: ${{ github.event.comment.body }}
-        TITILE: ${{ github.event.comment.body }}
-        BODY_TEST: ${{ github.event.comment.body_text }}
-        BODYTEST: ${{ github.event.comment.bodyText }}
       if: ${{ github.event.issue.pull_request }}
       run: | 
-        # startsWith( searchString, searchValue )
-        echo "$BODY"
-        echo "-----"
-        echo "$TITILE"
-        echo "-----"
-        echo "$BODY_TEST"
-        echo "-----"
-        echo "-----"
-        echo "$BODYTEST"
-        echo ${{ github.event.issue }}
-        echo ${{ github.event.issue.bodyText }}
-        echo ${{ github.event.issue.body_text }}
+        ${{ github.event.comment.body }}
         
-        # sbt clean coverage test coverageReport coverageAggregate
         
     - name: Show target files
       run: ls ./target/scala-2.12
