@@ -62,6 +62,7 @@ jobs:
         echo "-----"
         echo "$BODY_TEST"
         echo "-----"
+        echo "-----"
         echo "$BODYTEST"
         echo ${{ github.event.issue }}
         echo ${{ github.event.issue.bodyText }}
