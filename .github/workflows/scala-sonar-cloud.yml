@@ -17,6 +17,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Go to src
+      run: |
+        cd src
+        pwd
+    - name: check currnet
+      run: |
+        pwd
+    - name: Go to src again
+      run: |
+        cd src
+        pwd
+  
     - uses: actions/checkout@v2
     # This job only runs for pull request comments
     - name: PR comment
