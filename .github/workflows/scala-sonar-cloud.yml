@@ -19,6 +19,7 @@ jobs:
     steps:
     - name: Go to src
       run: |
+        pwd
         cd src
         pwd
     - name: check currnet
